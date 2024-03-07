@@ -6,7 +6,7 @@ const generatedAt = useState(() => new Date().toISOString())
 <template>
   <div id="container">
     <Head>
-      <Title>Nuxt on the edge</Title>
+      <Title>Where are you</Title>
       <Meta
         name="description"
         content="HTML, dynamically rendered in a city near you"
@@ -14,7 +14,7 @@ const generatedAt = useState(() => new Date().toISOString())
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:site" content="@nuxt_js" />
       <Meta name="twitter:creator" content="@nuxt_js" />
-      <Meta name="twitter:title" content="Nuxt on the edge" />
+      <Meta name="twitter:title" content="Where are you" />
       <Meta
         name="twitter:description"
         content="HTML, dynamically rendered in a city near you"
@@ -23,7 +23,7 @@ const generatedAt = useState(() => new Date().toISOString())
         name="twitter:image"
         content="https://nuxt-on-the-edge.vercel.app/og-card.png"
       />
-      <Meta name="twitter:image:alt" content="The Vercel and Nuxt logos" />
+      <Meta name="twitter:image:alt" content="Where are you" />
       <Meta
         name="og:image"
         content="https://nuxt-on-the-edge.vercel.app/og-card.png"
@@ -40,7 +40,7 @@ const generatedAt = useState(() => new Date().toISOString())
               <strong
                 :title="
                   info.city === '-'
-                    ? 'GeoIP information could not be derived from your IP'
+                    ? 'you are hacker?'
                     : null
                 "
               >
@@ -62,18 +62,18 @@ const generatedAt = useState(() => new Date().toISOString())
     <footer>
       <p class="company">
         <a target="_blank" href="https://whoisegor.ru" aria-label="whoisegor">
-          <LogoVercel />
+          <whoisegor />
         </a>
       </p>
       <p class="details">
         Built with
         <NuxtLink to="https://v3.nuxtjs.org" target="_blank">Nuxt</NuxtLink>
-        on
+        and
         <NuxtLink to="https://vercel.com" target="_blank">Vercel</NuxtLink>
       </p>
       <NuxtLink
         target="_blank"
-        href="https://github.com/pi0/nuxt-on-the-edge"
+        href="https://github.com/shikakker/whereareyou"
         class="source"
       >
         <LogoGithub />
