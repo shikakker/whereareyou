@@ -61,7 +61,7 @@ const generatedAt = useState(() => new Date().toISOString())
     </div>
     <footer>
       <p class="company">
-        <a target="_blank" href="https://vercel.com" aria-label="Vercel">
+        <a target="_blank" href="https://whoisegor.ru" aria-label="whoisegor">
           <LogoVercel />
         </a>
       </p>
