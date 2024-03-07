@@ -1,1 +1,1 @@
-**Online:** [https://whereareyou.whoisegor.ru/](https://whereareyou.whoisegor.ru/)https://whereareyou.whoisegor.ru/
+**Online:** [https://whereareyou.whoisegor.ru/](https://whereareyou.whoisegor.ru/)
