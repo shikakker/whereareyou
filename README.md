@@ -17,7 +17,7 @@
 ## 🛠️ Установка  
 1. Клонируйте репозиторий:  
    ```bash
-   git clone https://github.com/username/whereareyou.git
+   git clone https://github.com/shikakker/whereareyou.git
    cd whereareyou
    ```
 2. Установите зависимости (если есть):  
