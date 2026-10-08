@@ -6,58 +6,54 @@ const generatedAt = useState(() => new Date().toISOString())
 <template>
   <div id="container">
     <Head>
-      <Title>Where are you</Title>
+      <Title>Approximate Request Location</Title>
       <Meta
         name="description"
-        content="HTML, dynamically rendered in a city near you"
+        content="Privacy-aware request location utility using coarse Vercel geo headers and a masked IP prefix."
       />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:site" content="@nuxt_js" />
       <Meta name="twitter:creator" content="@nuxt_js" />
-      <Meta name="twitter:title" content="Where are you" />
+      <Meta name="twitter:title" content="Approximate Request Location" />
       <Meta
         name="twitter:description"
-        content="HTML, dynamically rendered in a city near you"
+        content="Privacy-aware request location utility using coarse Vercel geo headers and a masked IP prefix."
       />
       <Meta
         name="twitter:image"
-        content="https://nuxt-on-the-edge.vercel.app/og-card.png"
+        content="/og-card.png"
       />
-      <Meta name="twitter:image:alt" content="Where are you" />
+      <Meta name="twitter:image:alt" content="Approximate Request Location" />
       <Meta
         name="og:image"
-        content="https://nuxt-on-the-edge.vercel.app/og-card.png"
+        content="/og-card.png"
       />
     </Head>
     <div style="height: 100%">
       <AppBackground />
       <main>
-        <h1>Hello from the edge!</h1>
+        <h1>Approximate request location</h1>
         <div class="info">
           <div class="block">
             <div class="contents">
-              <span>Your city</span>
+              <span>Approximate city</span>
               <strong
-                :title="
-                  info.city === '-'
-                    ? 'you are hacker?'
-                    : null
-                "
+                title="Derived from Vercel request headers when available"
               >
-                {{ info.city }}
+                {{ info?.city || "Unavailable" }}
               </strong>
             </div>
           </div>
 
           <div class="block">
             <div class="contents">
-              <span>Your IP address</span>
-              <strong>{{ info.ip }}</strong>
+              <span>Masked network prefix</span>
+              <strong>{{ info?.maskedIp || "Unavailable" }}</strong>
             </div>
           </div>
         </div>
       </main>
-      <div class="debug">Generated at {{ generatedAt }}</div>
+      <div class="debug">Generated at {{ generatedAt }} · coarse location only · full IP is not returned to the page</div>
     </div>
     <footer>
       <p class="company">
@@ -67,7 +63,7 @@ const generatedAt = useState(() => new Date().toISOString())
       </p>
       <p class="details">
         Built with
-        <NuxtLink to="https://v3.nuxtjs.org" target="_blank">Nuxt</NuxtLink>
+        <NuxtLink to="https://nuxt.com" target="_blank">Nuxt</NuxtLink>
         and
         <NuxtLink to="https://vercel.com" target="_blank">Vercel</NuxtLink>
       </p>
